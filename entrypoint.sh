@@ -30,4 +30,8 @@ if [ ! -z "$INPUT_GROUPS" ]; then
   COMMAND="$COMMAND $INPUT_GROUPS"
 fi
 
+if [ ! -z "$INPUT_WORKDIR" ]; then
+  cd $INPUT_WORKDIR
+fi
+
 $COMMAND

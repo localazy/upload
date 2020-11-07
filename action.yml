@@ -2,12 +2,16 @@ name: 'Localazy Upload'
 description: 'Upload localizable files to the Localazy translation management platform.'
 
 inputs:
+  workdir: 
+    description: 'Defines the working directory where to invoke Localazy CLI command.'
+    required: false
+    default: ''
   config_file: 
-    description: 'The name of the configuration file. Default: localazy.json'
+    description: 'The filename of the configuration file. Default: localazy.json'
     required: false
     default: 'localazy.json'
   key_file:
-    description: 'The name of the key file.'
+    description: 'The filename of the key file.'
     required: false
     default: ''
   read_key: 
@@ -19,7 +23,7 @@ inputs:
     required: false
     default: ''
   force: 
-    description: 'Upload even if the validation fails; use only if you are sure that your configuration is correct.'
+    description: 'Whether to force the upload even if the validation fails; use only if you are sure that your configuration is correct.'
     required: false
     default: ''
   app_version:
