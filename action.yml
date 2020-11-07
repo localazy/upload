@@ -1,5 +1,9 @@
 name: 'Localazy Upload'
 description: 'Upload localizable files to the Localazy translation management platform.'
+author: 'Localazy'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
 
 inputs:
   workdir: 
