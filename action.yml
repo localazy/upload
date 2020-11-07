@@ -27,4 +27,7 @@ inputs:
     
 runs:
   using: 'docker'
-  image: 'localazy/cli:latest'
+  image: 'docker://localazy/cli:latest'
+  entrypoint: 'localazy upload'
+  
+  
