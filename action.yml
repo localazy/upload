@@ -2,24 +2,28 @@ name: 'Localazy Upload'
 description: 'Upload localizable files to the Localazy translation management platform.'
 
 inputs:
-  config-file: 
+  config_file: 
     description: 'The name of the configuration file. Default: localazy.json'
     required: false
     default: 'localazy.json'
-  key-file:
+  key_file:
     description: 'The name of the key file.'
     required: false
     default: ''
-  read-key: 
+  read_key: 
     description: 'The read key for the project on Localazy.'
     required: false
     default: ''
-  write-key: 
+  write_key: 
     description: 'The write key for the project on Localazy.'
     required: false
     default: ''
   force: 
-    description: 'Upload even if the validation fails; use only if you are sure that your configuration is correct'
+    description: 'Upload even if the validation fails; use only if you are sure that your configuration is correct.'
+    required: false
+    default: ''
+  app_version:
+    description: 'Override/provide the app version.'
     required: false
     default: ''
   groups:
@@ -27,7 +31,7 @@ inputs:
     
 runs:
   using: 'docker'
-  image: 'docker://localazy/cli:latest'
+  image: 'Dockerfile'
   entrypoint: 'localazy upload'
   
   
