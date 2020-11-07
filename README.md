@@ -38,7 +38,9 @@ Upload localizable files to the Localazy translation management platform. For de
 
 ## Example usage
 
+```yaml
 uses: localazy/upload-action@v1
 with:
   read_key: ${{ secrets.LOCALAZY_READ_KEY }}
   write_key: ${{ secrets.LOCALAZY_WRITE_KEY }}
+```
